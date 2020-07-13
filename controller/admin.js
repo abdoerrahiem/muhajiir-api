@@ -2,6 +2,19 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const Admin = require('../model/Admin')
 
+exports.getAdmin = async (req, res) => {
+  try {
+    const admin = await Admin.findById(req.admin.id).select('-password')
+
+    res.json({
+      success: true,
+      data: admin,
+    })
+  } catch (err) {
+    console.log(err.message)
+  }
+}
+
 exports.register = async (req, res) => {
   try {
     const admin = await Admin.create(req.body)

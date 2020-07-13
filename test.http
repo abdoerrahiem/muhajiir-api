@@ -76,6 +76,9 @@ DELETE http://localhost:5000/transactions/5f072a339b41f41f484fd7e8
 ### Delete all transactions
 DELETE http://localhost:5000/transactions
 
+### Get admin
+GET http://localhost:5000/admin
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQ2MjI3ODYsImV4cCI6MTU5NzIxNDc4Nn0.vJ1ntaBBAU84DUhr9lDvVnTulInzdt4V-HjUflrEJmw
 
 ### Register admin
 POST  http://localhost:5000/admin/register
