@@ -142,3 +142,29 @@ exports.deletePaket = async (req, res) => {
     }
   }
 }
+
+exports.getPaketByProvider = async (req, res) => {
+  try {
+    const paket = await Paket.find({ provider: req.params.providerId })
+
+    if (!paket)
+      return res.status(404).json({
+        success: false,
+        message: 'Paket tidak ditemukan',
+      })
+
+    res.json({
+      success: true,
+      data: paket,
+    })
+  } catch (err) {
+    console.log(err.message)
+
+    if (err.kind === 'ObjectId') {
+      res.status(404).json({
+        success: false,
+        message: 'Paket tidak ditemukan',
+      })
+    }
+  }
+}
