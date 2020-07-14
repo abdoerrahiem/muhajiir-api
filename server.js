@@ -13,6 +13,11 @@ MongoDB()
 app.use(express.json())
 app.use(cors())
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*')
+  next()
+})
+
 app.get('/', (req, res) => res.send('API running'))
 
 app.use('/providers', require('./routes/providers'))
