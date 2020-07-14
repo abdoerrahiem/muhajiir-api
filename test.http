@@ -12,7 +12,8 @@ GET http://localhost:5000/providers
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Get single provider
-GET http://localhost:5000/providers/5f06f017c88e2e1adcb547be
+GET http://localhost:5000/providers/5f0db6b164ba2200171c6bf9
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Update provider
 PUT  http://localhost:5000/providers/5f07080c2bca3500ecdf5f18

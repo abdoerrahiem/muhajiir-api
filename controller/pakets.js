@@ -146,6 +146,7 @@ exports.deletePaket = async (req, res) => {
 exports.getPaketByProvider = async (req, res) => {
   try {
     const paket = await Paket.find({ provider: req.params.providerId })
+    const provider = await Provider.findById(req.params.providerId)
 
     if (!paket)
       return res.status(404).json({
@@ -155,6 +156,7 @@ exports.getPaketByProvider = async (req, res) => {
 
     res.json({
       success: true,
+      provider,
       data: paket,
     })
   } catch (err) {
