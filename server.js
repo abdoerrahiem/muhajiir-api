@@ -13,8 +13,6 @@ MongoDB()
 app.use(express.json())
 app.use(cors())
 
-app.get('/', (req, res) => res.send('API running'))
-
 app.use('/providers', require('./routes/providers'))
 app.use('/pakets', require('./routes/pakets'))
 app.use('/transactions', require('./routes/transactions'))
