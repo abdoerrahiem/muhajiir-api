@@ -33,8 +33,8 @@ Content-Type: application/json
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 {
-    "name": "80 GB 30 hari",
-    "price": 80000,
+    "name": "90 GB 30 hari",
+    "price": 90000,
     "description": "Masa aktif 30 hari,Bonus internet seharian"
 }
 

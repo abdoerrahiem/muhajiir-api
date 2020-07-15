@@ -78,8 +78,7 @@ exports.updateProvider = async (req, res) => {
     })
 
     provider.name =
-      provider.name.trim()[0].toUpperCase() +
-      provider.name.slice(1).toLowerCase()
+      provider.name.trim()[0].toUpperCase() + provider.name.slice(1)
 
     provider.save()
 
