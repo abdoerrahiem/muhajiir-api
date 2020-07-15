@@ -13,12 +13,12 @@ const PaketSchema = new mongoose.Schema({
   description: {
     type: [String],
   },
+  createdAt: { type: Date, default: Date.now },
   provider: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Provider',
     required: true,
   },
-  createdAt: { type: Date, default: Date.now },
 })
 
 module.exports = mongoose.model('Paket', PaketSchema)
