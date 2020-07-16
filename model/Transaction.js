@@ -37,7 +37,7 @@ TransactionSchema.pre('save', function (next) {
 })
 
 TransactionSchema.pre('save', function (next) {
-  this.createdAt = moment(this.createdAt).format('MMM Do YY')
+  this.createdAt = moment(Date.now()).format('MMM Do YY')
 
   next()
 })
