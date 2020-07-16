@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const moment = require('moment')
 
 const TransactionSchema = new mongoose.Schema({
   name: {
@@ -31,6 +32,12 @@ TransactionSchema.pre('save', function (next) {
     .split(' ')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
+
+  next()
+})
+
+TransactionSchema.pre('save', function (next) {
+  this.createdAt = moment(this.createdAt).format('MMM Do YY')
 
   next()
 })

@@ -4,6 +4,7 @@ const {
   getTransactions,
   deleteTransaction,
   deleteAllTransactions,
+  getTodayTransactions,
 } = require('../controller/transactions')
 
 router
@@ -12,5 +13,6 @@ router
   .post(createTransaction)
   .delete(deleteAllTransactions)
 router.route('/:id').delete(deleteTransaction)
+router.route('/today').get(getTodayTransactions)
 
 module.exports = router

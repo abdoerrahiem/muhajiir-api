@@ -1,4 +1,5 @@
 const Transaction = require('../model/Transaction')
+const moment = require('moment')
 
 exports.getTransactions = async (req, res) => {
   try {
@@ -10,6 +11,22 @@ exports.getTransactions = async (req, res) => {
       data: transactions,
     })
   } catch (err) {
+    console.log(err.message)
+  }
+}
+
+exports.getTodayTransactions = async (req, res) => {
+  try {
+    const transactions = await Transaction.find()
+
+    console.log(moment(Date.now()).format('MMM Do YY'))
+
+    res.json({
+      success: true,
+      count: transactions.length,
+      data: transactions,
+    })
+  } catch (error) {
     console.log(err.message)
   }
 }
