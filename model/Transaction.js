@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const moment = require('moment')
 
 const TransactionSchema = new mongoose.Schema({
   name: {
@@ -11,10 +10,6 @@ const TransactionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  provider: {
-    type: String,
-    required: true,
-  },
   paket: {
     type: String,
     required: true,
@@ -23,7 +18,6 @@ const TransactionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  date: { type: String },
   createdAt: { type: Date, default: Date.now },
 })
 
@@ -33,12 +27,6 @@ TransactionSchema.pre('save', function (next) {
     .split(' ')
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
-
-  next()
-})
-
-TransactionSchema.pre('save', function (next) {
-  this.date = moment(Date.now()).format('MMM Do YY')
 
   next()
 })

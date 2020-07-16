@@ -80,6 +80,9 @@ Content-Type: application/json
 ### Get all transactions
 GET http://localhost:5000/transactions
 
+### Get all transactions
+GET http://localhost:5000/transactions/today
+
 ### Delete transaction
 DELETE http://localhost:5000/transactions/5f072a339b41f41f484fd7e8
 
