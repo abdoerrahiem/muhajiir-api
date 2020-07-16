@@ -147,13 +147,21 @@ exports.deletePaket = async (req, res) => {
 
 exports.getPaketByProvider = async (req, res) => {
   try {
-    const paket = await Paket.find({ provider: req.params.providerId })
+    const paket = await Paket.find({ provider: req.params.providerId }).sort({
+      price: 1,
+    })
     const provider = await Provider.findById(req.params.providerId)
 
     if (!paket)
       return res.status(404).json({
         success: false,
         message: 'Paket tidak ditemukan',
+      })
+
+    if (!provider)
+      return res.status(404).json({
+        success: false,
+        message: 'Provider tidak ditemukan',
       })
 
     res.json({

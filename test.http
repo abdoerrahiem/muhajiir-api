@@ -12,7 +12,7 @@ GET http://localhost:5000/providers
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Get single provider
-GET http://localhost:5000/providers/5f0db6b164ba2200171c6bf9
+GET http://localhost:5000/providers/5f10089125e7ff00172b1cc1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Update provider
@@ -47,7 +47,7 @@ GET http://localhost:5000/pakets/5f0dc9a10119d9050ccb8021
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Get paket by provider
-GET http://localhost:5000/pakets/provider/5f0db6b164ba2200171c6bf9
+GET http://localhost:5000/pakets/provider/5f10089125e7ff00172b1cc1
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Update paket
@@ -98,8 +98,8 @@ POST  http://localhost:5000/admin/register
 Content-Type: application/json
 
 {
-    "username": "admin",
-    "password": "admin123"
+    "username": "muhajjir",
+    "password": "996130"
 }
 
 ### Login admin
