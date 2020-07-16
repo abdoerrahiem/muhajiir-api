@@ -3,7 +3,10 @@ const Paket = require('../model/Paket')
 
 exports.getProviders = async (req, res) => {
   try {
-    const providers = await Provider.find().populate('pakets')
+    const providers = await Provider.find().populate({
+      path: 'pakets',
+      options: { sort: { price: 1 } },
+    })
 
     res.json({
       success: true,

@@ -47,7 +47,7 @@ GET http://localhost:5000/pakets/5f0dc9a10119d9050ccb8021
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Get paket by provider
-GET http://localhost:5000/pakets/provider/5f10089125e7ff00172b1cc1
+GET http://localhost:5000/pakets/provider/5f1008a525e7ff00172b1cc3
 token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjVmMDczNzkyOTY5YjhlMWM4MDY3ODExMCJ9LCJpYXQiOjE1OTQzMTAwMDQsImV4cCI6MTU5NjkwMjAwNH0.flLyIU4CMkWNdxdrlb2si0DOUVR5wksY05PDk4GO4Kk
 
 ### Update paket
