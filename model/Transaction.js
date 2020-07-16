@@ -23,7 +23,8 @@ const TransactionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createdAt: { type: Date },
+  date: { type: String },
+  createdAt: { type: Date, default: Date.now },
 })
 
 TransactionSchema.pre('save', function (next) {
@@ -37,7 +38,7 @@ TransactionSchema.pre('save', function (next) {
 })
 
 TransactionSchema.pre('save', function (next) {
-  this.createdAt = moment(Date.now()).format('MMM Do YY')
+  this.date = moment(Date.now()).format('MMM Do YY')
 
   next()
 })
