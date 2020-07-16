@@ -23,7 +23,7 @@ const TransactionSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  createdAt: { type: Date, default: Date.now },
+  createdAt: { type: Date },
 })
 
 TransactionSchema.pre('save', function (next) {
