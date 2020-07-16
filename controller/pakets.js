@@ -86,11 +86,13 @@ exports.updatePaket = async (req, res) => {
     paket = await Paket.findByIdAndUpdate(
       req.params.id,
       {
-        name: req.body.name ? req.body.name : paket.name,
-        price: req.body.price ? req.body.price : paket.price,
-        description: req.body.description
-          ? req.body.description.split(',')
-          : paket.description,
+        $set: {
+          name: req.body.name ? req.body.name : paket.name,
+          price: req.body.price ? req.body.price : paket.price,
+          description: req.body.description
+            ? req.body.description.split(',')
+            : paket.description,
+        },
       },
       {
         new: true,
